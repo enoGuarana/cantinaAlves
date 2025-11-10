@@ -1,0 +1,171 @@
+/* RESET BÁSICO E CONFIGURAÇÕES GERAIS */
+body {
+    font-family: Arial, sans-serif; /* Fonte simples e legível */
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Fundo levemente cinza */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ESTILO DO CABEÇALHO (HERO SECTION) */
+.hero {
+    background-color: #8B0000; /* Vermelho escuro/Borgonha - cor forte para restaurante */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    /* Imagem de fundo opcional para maior atratividade, mas mantive simples */
+    /* background-image: url('caminho-para-sua-imagem.jpg'); */
+    /* background-size: cover; */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    letter-spacing: 3px; /* Espaçamento para o nome do restaurante */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FFD700; /* Amarelo ouro para destaque */
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFA500; /* Laranja ao passar o mouse */
+}
+
+/* SEÇÃO DO CARDÁPIO */
+.menu-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-section h2 {
+    color: #8B0000; /* Cor de destaque */
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* CATEGORIAS DO CARDÁPIO */
+.menu-category {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.menu-category h3 {
+    color: #4CAF50; /* Verde para categorias, remetendo a frescor */
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-category li {
+    padding: 5px 0;
+    font-size: 1.1em;
+    display: flex; /* Para alinhar o preço */
+    justify-content: space-between; /* Espaço entre o item e o preço */
+}
+
+.menu-category li strong {
+    font-weight: 700;
+    color: #8B0000;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+/* ==================================== */
+/* 🎨 REGRAS PARA RESPONSIVIDADE (MOBILE) */
+/* ==================================== */
+
+@media (max-width: 600px) {
+    
+    /* 1. SEÇÃO PRINCIPAL (HEADER) */
+    .hero {
+        padding: 60px 10px; /* Reduz o padding para não ocupar tanto espaço vertical */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Reduz o tamanho do título principal */
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 1em; /* Reduz o tamanho da frase de marketing */
+    }
+
+    .btn {
+        padding: 12px 25px; /* Mantém o botão grande e clicável */
+    }
+
+    /* 2. SEÇÃO CARDÁPIO */
+    .menu-section {
+        padding: 20px 10px; /* Reduz o padding geral da seção */
+    }
+
+    .menu-section h2 {
+        font-size: 1.5em; /* Reduz o título da seção */
+    }
+
+    /* 3. LISTAS DO CARDÁPIO (O mais importante!) */
+    .menu-category {
+        padding: 15px;
+    }
+
+    .menu-category li {
+        /* Muda o layout de linha para coluna: Item em cima, Preço embaixo */
+        flex-direction: column; 
+        align-items: flex-start; /* Alinha o texto à esquerda */
+        font-size: 1em;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #eee; /* Linha sutil para separar itens */
+    }
+    
+    .menu-category li strong {
+        display: block; /* Garante que o preço vá para a linha de baixo */
+        margin-top: 3px;
+        font-size: 1.1em;
+    }
+    
+    /* 4. BOTÃO WHATSAPP */
+    .whatsapp-btn {
+        padding: 8px 12px;
+        font-size: 0.8em;
+        /* Se você usou o texto 'Fazer Pedido por WhatsApp', 
+           talvez seja melhor apenas o ícone ou um texto menor em mobile: */
+        /* content: 'Zap'; */ 
+    }
+}
